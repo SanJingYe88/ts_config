@@ -10,7 +10,7 @@ spring:
     password: root
   jpa:
     database: mysql
-    show-sql: true
+    #show-sql: true
 eureka:
   client:
     #注册进eureka服务列表内
