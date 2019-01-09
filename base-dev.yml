@@ -10,7 +10,10 @@ spring:
     password: root
   jpa:
     database: mysql
-    #show-sql: true
+    show-sql: true
+  rabbitmq: #rabbimq配置
+    host: 192.168.1.112
+    port: 5672
 eureka:
   client:
     #注册进eureka服务列表内
