@@ -12,7 +12,7 @@ spring:
     database: mysql
     #show-sql: true
   rabbitmq: #rabbimq配置
-    host: 192.168.1.112
+    host: 192.168.1.102
     port: 5672
 eureka:
   client:
