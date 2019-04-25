@@ -5,7 +5,7 @@ spring:
     name: ts-base
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ts_base
+    url: jdbc:mysql://192.168.43.248:3306/ts_base
     username: root
     password: root
   jpa:
