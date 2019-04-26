@@ -22,7 +22,7 @@ eureka:
     fetch-registry: true
     #设置与Eureka Server交互的地址(即 Eureka Server 所在的地址)
     service-url:
-      defaultZone: http://localhost:6868/eureka/
+      defaultZone: http://192.168.43.191:6868/eureka/
   instance:
     #显示ip地址
     prefer-ip-address: true
