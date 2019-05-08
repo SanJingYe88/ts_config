@@ -1,0 +1,43 @@
+server: 
+  port: 9008
+eureka:
+  client:
+    #注册进eureka服务列表内
+    register-with-eureka: true
+    #需要去检索其他微服务
+    fetch-registry: true
+    #设置与Eureka Server交互的地址(即 Eureka Server 所在的地址)
+    service-url:
+      defaultZone: http://192.168.43.191:6868/eureka/
+  instance:
+    #显示ip地址
+    prefer-ip-address: true
+spring: 
+  application:  
+    name: ts-user #指定服务名
+  datasource:  
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.43.191:3306/ts_user?useUnicode=true&amp;characterEncoding=UTF8
+    username: root
+    password: root
+  jpa: 
+    database: MySQL
+    show-sql: true
+  redis:
+    database: 0
+    host: 192.168.43.191
+    port: 6379
+    timeout: 5000ms
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 3
+        max-wait: 5000ms
+  rabbitmq:
+    host: 192.168.43.191
+    port: 5672
+
+jwt:
+  key: kkkkkkkkk    #jwt.key
+  ttl: 600000   #jwt.ttl 十分钟
