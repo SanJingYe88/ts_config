@@ -41,3 +41,4 @@ spring:
 jwt:
   key: kkkkkkkkk    #jwt.key
   ttl: 600000   #jwt.ttl 十分钟
+debug:true
