@@ -1,5 +1,6 @@
 server:
   port: 9011
+debug: true
 spring:
   application:
     name: ts-manager
