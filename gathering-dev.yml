@@ -1,0 +1,31 @@
+server: 
+  port: 9005
+spring: 
+  application:  
+    name: ts-gathering #指定服务名
+  datasource:  
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.43.191:3306/ts_gathering
+    username: root
+    password: root
+  jpa: 
+    database: MySQL
+    show-sql: true
+  #文件上传大小限制
+  servlet:
+    multipart:
+      maxFileSize: 30MB
+      maxRequestSize: 30MB
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://192.168.43.191:6868/eureka/
+  instance:
+    prefer-ip-address: true
+#文件上传路径
+file:
+  upload:
+    basePath4Win: C:\Users\ThinkPad\Desktop\ES6\test\vue-admin-template-master\src\assets\upload
+    basePath4Linux: /usr/local/ts_parent/upload
