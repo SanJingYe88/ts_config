@@ -1,0 +1,62 @@
+server:
+  port: 9011
+spring:
+  application:
+    name: ts-manager
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.43.191:6868/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:   #配置路由规则,k-v类型
+    ts-base:    #base微服务
+      path: /base/**    #配置请求URL的请求规则
+      serviceId: ts-base  #指定Eureka注册中心中的服务id
+    ts-article:    #article微服务
+      path: /article/**
+      serviceId: ts-article
+    ts-gathering:    #gathering微服务
+      path: /gathering/**
+      serviceId: ts-gathering
+    ts-qa:    #qa微服务
+      path: /qa/**
+      serviceId: ts-qa
+    ts-recruit:    #recruit微服务
+      path: /recruit/**
+      serviceId: ts-recruit
+    ts-search:    #search微服务
+      path: /search/**
+      serviceId: ts-search
+    ts-spit:    #spit微服务
+      path: /spit/**
+      serviceId: ts-spit
+    ts-user:    #user微服务
+      path: /user/**
+      serviceId: ts-user
+  max:
+    host:
+      connections: 500
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
+
+##timeout config
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+
