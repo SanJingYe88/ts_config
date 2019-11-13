@@ -5,14 +5,14 @@ spring:
     name: ts-base
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.43.191:3306/ts_base
-    username: root
-    password: root
+    url: jdbc:mysql://106.13.227.74:3306/ts_base
+    username: ts_base
+    password: DSpBJacfTp4HrhLZ
   jpa:
     database: mysql
     #show-sql: true
   rabbitmq: #rabbimq配置
-    host: 192.168.43.191
+    host: 106.13.227.74
     port: 5672
 eureka:
   client:
@@ -22,7 +22,7 @@ eureka:
     fetch-registry: true
     #设置与Eureka Server交互的地址(即 Eureka Server 所在的地址)
     service-url:
-      defaultZone: http://192.168.43.191:6868/eureka/
+      defaultZone: http://106.13.227.74:6868/eureka/
   instance:
     #显示ip地址
     prefer-ip-address: true
