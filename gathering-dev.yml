@@ -6,7 +6,7 @@ spring:
     name: ts-gathering #指定服务名
   datasource:  
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://106.13.226.74:3306/ts_gathering
+    url: jdbc:mysql://106.13.227.74:3306/ts_gathering
     username: ts_gathering
     password: 3iZwCCMtMNZLxdb7
   jpa: 
@@ -22,7 +22,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://106.13.226.74:6868/eureka/
+      defaultZone: http://106.13.227.74:6868/eureka/
   instance:
     prefer-ip-address: true
 #文件上传路径
