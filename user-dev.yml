@@ -8,7 +8,7 @@ eureka:
     fetch-registry: true
     #设置与Eureka Server交互的地址(即 Eureka Server 所在的地址)
     service-url:
-      defaultZone: http://192.168.1.176:6868/eureka/
+      defaultZone: http://106.13.227.74:6868/eureka/
   instance:
     #显示ip地址
     prefer-ip-address: true
@@ -17,7 +17,7 @@ spring:
     name: ts-user #指定服务名
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.1.136:3306/ts_user
+    url: jdbc:mysql://106.13.227.74:3306/ts_user
     username: root
     password: root
   jpa:
@@ -25,7 +25,7 @@ spring:
     show-sql: true
   redis:
     database: 0
-    host: 192.168.1.176
+    host: 106.13.227.74
     port: 6379
     timeout: 5000ms
     jedis:
@@ -35,7 +35,7 @@ spring:
         min-idle: 3
         max-wait: 5000ms
   rabbitmq:
-    host: 192.168.1.176
+    host: 106.13.227.74
     port: 5672
 
 jwt:
